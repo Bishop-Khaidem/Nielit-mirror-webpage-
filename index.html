@@ -1,0 +1,411 @@
+<html>
+<head>
+    <title>Nielit webpage</title>
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .divider {
+            margin: 0 20px;
+            border-left: 2px solid black;
+            height: 60px;
+        }
+
+        .right-section {
+            text-align: right;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .right-section img {
+            height: 60px;
+        }
+
+        #navbar {
+            background-color:green;
+            height: 40px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        #navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+        }
+
+        #navbar li {
+            margin: 0px 10px;
+            position: relative;
+        }
+
+        #navbar a {
+            text-decoration: none;
+            color: beige;
+            font-weight: bold;
+            padding: 8px 12px;
+        }
+
+        #navbar a:hover {
+            background-color: rgb(23, 114, 175);
+        }
+
+        #navbar ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgb(204, 220, 235);
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            z-index: 1000;
+            flex-direction: column;
+            min-width: 200px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        #navbar ul ul li {
+            margin: 0;
+        }
+
+        #navbar ul ul a {
+            display: block;
+            color: black;
+            padding: 10px 15px;
+            white-space: normal;
+            overflow-wrap: break-word;
+            width: 220px;
+        }
+
+        #navbar li:hover>ul {
+            display: block;
+        }
+
+        marquee {
+            background: #e6f0ff;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .slideshow {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slideshow img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: fade 8s infinite;
+        }
+
+        .slideshow img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slideshow img:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        @keyframes fade {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            45% { opacity: 1; }
+            55% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        .introduction-container {
+            display: flex;
+            align-items: flex-start;
+            max-width: 100%;
+            margin: 20px;
+            gap: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .introduction-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .introduction-image img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #000;
+        }
+
+        .introduction-text {
+            flex: 1;
+            padding: 0;
+        }
+
+        .introduction-text h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .introduction-text p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0 0 15px 0;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #b3bdc5;
+            color: rgb(20, 15, 15);
+            padding: 40px 20px;
+            font-size: 14px;
+            width: 72%;
+            float: left;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 220px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            color:green;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .footer-section p {
+            margin: 4px 0;
+        }
+
+        .footer-contact strong {
+            display: inline-block;
+            width: 80px;
+        }
+
+        .wrapper {
+            background-color: rgb(34, 94, 184);
+            color: white;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            float: right;
+            height: 389px;
+        }
+
+        .wrapper form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 10px;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <Header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+        <div class="header">
+            <div class="left-section">
+                <img src="https://nielit.gov.in/sites/all/themes/berry/images/NIELIT-Logo.png" alt="Logo">
+                <div class="divider"></div>
+                <div>
+                    <div style="font-size: 20px; font-family: epaomayek; white-space: nowrap;color:green;">
+                      nesneL INstit_yuY Aof IleQt_roniQs AeN
+                        INformesN teQnoloji, IMfaL</div>
+                    <div style="color:green;" >National Institute of Electronics & Information Technology, Imphal</div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div>
+                    <div style="font-weight: bold;color:green;">Ministry of Electronics & Information Technology</div>
+                    <div style ="color:green;">Government of India</div>
+                </div>
+                <img src="National emblem .jpg" alt="India Emblem">
+            </div>
+        </div>
+    </Header>
+    <div>
+        <div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a>
+                        <ul>
+                            <li><a href="">Introduction</a></li>
+                            <li><a href="">Executive Director's desk</a></li>
+                            <li><a href="">Vision</a></li>
+                            <li><a href="">Mission</a></li>
+                            <li><a href="">Acts & rules</a></li>
+                            <li><a href="">Policies & guidelines</a></li>
+                            <li><a href="">Organization structure</a></li>
+                            <li><a href="">Recognition</a></li>
+                            <li><a href="">Institution</a></li>
+                            <li><a href="">NIELIT Society</a></li>
+                            <li><a href="">NIELIT Scheme</a></li>
+                            <li><a href="">Disclaimer</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Management</a>
+                        <ul>
+                            <li><a href="">Organization structure</a></li>
+                            <li><a href="">Governing Council</a></li>
+                            <li><a href="">Management Board</a></li>
+                            <li><a href="">Finance & Account Committee</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Services</a>
+                        <ul>
+                            <li><a href="">Online Class</a></li>
+                            <li><a href="">Activities</a></li>
+                            <li><a href="">Infrastructure</a></li>
+                            <li><a href="">Cyber SEcurity Awareness Project</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Student zone</a>
+                        <ul>
+                            <li><a href="">Courses Offered by Nielit Imphal</a></li>
+                            <li><a href="">Results</a></li>
+                            <li><a href="">Download</a></li>
+                            <li><a href="">Admissionsa</a></li>
+                            <li><a href="">Non-Formal Courses</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">News</a>
+                        <ul>
+                            <li><a href="">Academics News</a></li>
+                            <li><a href="">NIELIT News</a></li>
+                            <li><a href="">NIELIT in Press</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Recruitment</a></li>
+                    <li><a href="">Tenders/Eol</a></li>
+                    <li><a href="">Contact Us</a>
+                        <ul>
+                            <li><a href="">Nodal Officer for handling COVID-19 Public Grievances</a></li>
+                            <li><a href="">NIELIT Imphal Contact Details</a></li>
+                            <li><a href="">Right to Information</a></li>
+                            <li><a href="">Grievance Redress</a></li>
+                            <li><a href="">Vigilance Officer</a></li>
+                            <li><a href="">Kakching</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">NIELIT HQ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <marquee direction="left" scrollamount="10">
+            <font size="2" color="black">National Institute of Electronics & Information Technology, Imphal</font>
+        </marquee>
+
+        <main>
+            <div class="slideshow">
+                <img src="Slide 1.jpg" alt="Slide1" class="slide">
+                <img src="Slide 2.jpg" alt="Slide2" class="slide">
+            </div>
+
+            <div class="introduction-container">
+                <div class="introduction-image">
+                    <img src="img1.jpg" alt="Introduction Image">
+                </div>
+                <div class="introduction-text">
+                    <h2>Introduction</h2>
+                    <p>NIELIT Imphal (erstwhile CEDT/CEDTI/DOEACC) became operational in July 1989 with the introduction of Three Years Diploma in Electronics Engineering Course. There are 02 Extension Centres of NIELIT Imphal at Churachandpur & Senapati Districts of Manipur. There are 21 NIELIT Centres & Extension Centres in the North Eastern parts of India (Out of 43 all over India).</p>
+                    <p>The Centre is located at Akampat, about 5 kms. in the south-east direction from the heart of the Imphal city. Spread over an area of more than 20 acres, it houses the main Institute Buildings consisting of Administrative wing, Lecture Halls, Faculty Rooms, Computer Labs, Mechanical Workshop and several labs in the field of Information, Electronics & Communication Technology. Besides the main institute building, the campus houses the staff quarters, students’ hostels, electrical substation and other host of essential facilities.</p>
+                    <p>NIELIT Imphal is participating in Nation Building by conducting various long term & short term skill development courses in the fields of Electronics & Communication Engineering and Information Technology. NIELIT Imphal also offers various short term courses in the skill development sector with an objective of enhancing the employability of the youth of the state and country as a whole as mandated by the Govt. of India under the National Skill Development policy.</p>
+                    <p>The long-term courses viz, Diploma in Electronics and Communication Engineering (AICTE recognized), Diploma in Computer Science & Engineering (AICTE recognized), Post Graduate Diploma in Computer Applications (PGDCA), Bachelor of Computer Applications (BCA), Master of Computer Application (MCA) and Master of Science in Information Technology (MSc.IT) are formal courses affiliated to Manipur University (A Central University). NIELIT ‘O’ Level courses in IT, Hardware and Multimedia are in the non-formal sector but, leading to govt. recognized certificate/P.G. Diploma.</p>
+                    <p>With a vast experience in E-Learning areas, NIELIT Imphal was successful in migrating to online mode of classes of all the above mentioned courses during COVID-19 lockdown period. To have more effective online classes, NIELIT Imphal is using MOODLE as LMS in addition to various other Tools & Techniques for both synchronous and asynchronous mode.</p>
+                    <p>Over the years, NIELIT courses have benefited a number of students and its popularity has been increasing. Since its inception in the year 1988, the institute has trained more than 4000 students in Formal University affiliated courses, more than 6500 in Non-Formal NIELIT Courses and more than 50,000 candidates in several short term courses.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>IMPORTANT LINKS</h3>
+                    <p>meity.gov.in</p>
+                    <p>india.gov.in</p>
+                    <p>mygov.in</p>
+                    <p>rtionline.gov.in</p>
+                    <p>esdm-skill.deity.gov.in</p>
+                    <p>AICTE</p>
+                    <p>Government of Manipur</p>
+                    <p>PMO Website Manipuri</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>ONLINE SERVICES</h3>
+                    <p>Registration</p>
+                    <p>Examination</p>
+                    <p>Accreditation</p>
+                    <p>CCC/BCC Facilitation</p>
+                    <p>Recruitments</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>CONTACT US</h3>
+                    <div class="footer-contact">
+                        <p><strong>NIELIT Imphal</strong></p>
+                        <p>Akampat P.O.Box-104,<br>Imphal<br>Manipur -795001</p>
+                        <p><strong>E-mail:</strong> dir-imphal[at]nielit[dot]gov[dot]in</p>
+                        <p><strong>Telephone:</strong> (0385)2454109</p>
+                        <p><strong>Fax:</strong> (0385)2449578</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="wrapper">
+            <div>
+                <h2>CONTACT FORM</h2>
+            </div>
+            <form>
+                <div><label>Name </label><input type="text" name="name" required /></div>
+                <div><label>Contact No. </label><input type="text" name="phNo" required /></div>
+                <div><label>Email </label><input type="email" name="email" /></div>
+                <div><label>Subject </label><input type="text" name="subject" required /></div>
+                <div><label>Message </label><textarea name="message"></textarea></div>
+                <div><input type="submit" value="Submit" /></div>
+            </form>
+        </div>
+        <div style="height:40px; width: 100%; background-color: black; color: #e6f0ff; clear: both; display: flex; justify-content: center; align-items: center;"> © Bishop khaidem  2025. All Rights Reserved </div>
+    </div>
+</body>
+
+                          </html>
